@@ -64,8 +64,12 @@ function App() {
   
   return (
     
-          <div className="app">
-            <div className='cards-container'>
+          <div className="container">
+            <div className='row'>
+
+            <div className='col-12  col-md-9 order-2 order-md-1'>
+
+            <div class="row">
             {
               cards.map((card, index) =>(
                 <Card 
@@ -76,9 +80,13 @@ function App() {
                 unflippedCards ={unflippedCards}
                 disableCards ={disableCards}
                 />))
-              
+             
             }
-           
+            </div>
+            </div>
+           <div class="col-12 col-md-3 order-1 order-md-2 azul">
+         <h1>Resultados</h1>
+           </div>
             
             </div>
           

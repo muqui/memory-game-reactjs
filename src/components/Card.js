@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import ReactCardFlip from 'react-card-flip'
-import backFace from '../images/question.png'
+import backFace from '../images/pregunta.png'
 
 export const Card = ({name,number,frontFace, flipCard, unflippedCards, disableCards}) => {
     const [isFlipped, SetIsFlipped] = useState(false);
@@ -31,10 +31,10 @@ export const Card = ({name,number,frontFace, flipCard, unflippedCards, disableCa
         
     }
   return (
-    <div className='card'>
+    <div className='col-3 p-0 mb-2 mb-sm-0'>
         <ReactCardFlip isFlipped={isFlipped} >
-            <img className='card-image' width='240px' height='150 px' src={backFace} alt='back-face' onClick={hasEvent ? handleClick : null}/>
-            <img className='card-image' width='240px' height='150 px' src ={frontFace}  alt = 'front-face' onClick={hasEvent ? handleClick : null} />
+            <img className='img-fluid' src={backFace} alt='back-face' onClick={hasEvent ? handleClick : null}/>
+            <img className='img-fluid'  src ={frontFace}  alt = 'front-face' onClick={hasEvent ? handleClick : null} />
         </ReactCardFlip>
     </div>
   )
